@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Tags Semânticas HTML5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO DO DOCUMENTO -->
+    <header>
+        <!-- GRUPO DE TÍTULOS -->
+        <hgroup>
+            <h1>Guia Completo de Tags Semânticas</h1>
+            <p>Aprenda como estruturar a web de forma significativa.</p>
+        </hgroup>
+
+        <!-- NAVEGAÇÃO PRINCIPAL -->
+        <nav>
+            <ul>
+                <li><a href="#artigo">Ir para o Artigo</a></li>
+                <li><a href="#tabela">Ir para a Tabela</a></li>
+                <li><a href="#formulario">Ir para o Formulário</a></li>
+            </ul>
+        </nav>
+
+        <div class="d_whats">
+            <p class="p_whats"><strong>W</strong></p>
+        </div>
+
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+    <main>
+
+        <section>
+            <h2>TITULO</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus beatae sed sint? Voluptas laboriosam quis dolorum praesentium saepe dolore neque! Id, laudantium a! Sed incidunt earum rem quia neque.</p>
+        </section>
+
+                <section>
+            <h2>TITULO</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus beatae sed sint? Voluptas laboriosam quis dolorum praesentium saepe dolore neque! Id, laudantium a! Sed incidunt earum rem quia neque.</p>
+        </section>
+
+                <section>
+            <h2>TITULO</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus beatae sed sint? Voluptas laboriosam quis dolorum praesentium saepe dolore neque! Id, laudantium a! Sed incidunt earum rem quia neque.</p>
+        </section>
+
+                <section>
+            <h2>TITULO</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus beatae sed sint? Voluptas laboriosam quis dolorum praesentium saepe dolore neque! Id, laudantium a! Sed incidunt earum rem quia neque.</p>
+        </section>
+
+                <section>
+            <h2>TITULO</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus beatae sed sint? Voluptas laboriosam quis dolorum praesentium saepe dolore neque! Id, laudantium a! Sed incidunt earum rem quia neque.</p>
+        </section>
+
+        <!-- CONTEÚDO INDEPENDENTE (ARTIGO) -->
+        <article id="artigo">
+
+            <!-- SEÇÃO DE CONTEÚDO DENTRO DO ARTIGO -->
+            <section>
+                <h3>Conceitos de Texto</h3>
+                <p>
+                    A HTML5 trouxe muitas tags de texto. Por exemplo, podemos destacar um texto com <mark>marcação visual</mark>, 
+                    usar <strong>negrito semântico para importância</strong> e <em>itálico para ênfase</em>.
+                </p>
+                <p>
+                    Quando usamos uma abreviação, como <abbr title="HyperText Markup Language">HTML</abbr>, ajudamos os leitores de tela. 
+                    Se definirmos um termo, usamos <dfn>Semântica</dfn>, que significa dar significado ao código.
+                </p>
+                <p>
+                    Uma citação em bloco:
+                    <blockquote cite="https://developer.mozilla.org/">
+                        "A semântica em HTML significa usar as tags apropriadas para o conteúdo correto."
+                    </blockquote>
+                    E uma citação curta: Como disse o criador, <q>isso é maravilhoso</q>. A fonte desse trabalho é <cite>MDN Web Docs</cite>.
+                </p>
+
+                <!-- TEXTOS COMPLEXOS E IDIOMAS -->
+                <p>
+                    Isolamento bidirecional (para idiomas que leem da direita pra esquerda): <bdi>texto isolado</bdi>.
+                    Sobrescrita bidirecional: <bdo dir="rtl">Este texto será lido de trás para frente</bdo>.
+                </p>
+                <p>
+                    Anotação Ruby (usado muito em idiomas asiáticos): 
+                    <ruby>
+                        漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+                        字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+                    </ruby>
+                </p>
+            </section>
+
+            <!-- CONTEÚDO MULTIMÍDIA E FIGURAS -->
+            <section>
+                <h3>Multimídia</h3>
+                
+                <!-- FIGURA E LEGENDA -->
+                <figure>
+                    <picture>
+                        <!-- FONTE ALTERNATIVA DE IMAGEM -->
+                        <source media="(min-width: 650px)" srcset="imagem-grande.jpg">
+                        <img src="imagem-padrao.jpg" alt="Exemplo de imagem de paisagem" width="300">
+                    </picture>
+                    <figcaption>Figura 1: Exemplo do uso da tag figure, picture e figcaption.</figcaption>
+                </figure>
+
+                <!-- ÁUDIO E VÍDEO -->
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                </audio>
+                
+                <video width="320" height="240" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    <!-- LEGENDA DO VÍDEO -->
+                    <track src="legendas_pt.vtt" kind="subtitles" srclang="pt" label="Português">
+                </video>
+            </section>
+
+            <!-- WIDGETS INTERATIVOS E DADOS -->
+            <section id="tabela">
+                <h3>Dados Tabulares</h3>
+                <table>
+                    <caption>Tabela Semântica de Frutas</caption>
+                    <!-- AGRUPAMENTO DE COLUNAS -->
+                    <colgroup>
+                        <col style="background-color: #f2f2f2;">
+                        <col span="2">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">Fruta</th>
+                            <th scope="col">Cor</th>
+                            <th scope="col">Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maçã</td>
+                            <td>Vermelha</td>
+                            <td>R$ 5,00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td>R$ 5,00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <section id="formulario">
+                <h3>Formulários e Elementos Interativos</h3>
+                
+                <form action="/submit" method="post">
+                    <!-- AGRUPAMENTO DE CAMPOS DO FORMULÁRIO -->
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+                        
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome">
+                        
+                        <label for="navegador">Navegador favorito:</label>
+                        <input list="navegadores" id="navegador" name="navegador">
+                        <!-- LISTA DE DADOS PRÉ-DEFINIDA -->
+                        <datalist id="navegadores">
+                            <option value="Chrome">
+                            <option value="Firefox">
+                            <option value="Safari">
+                        </datalist>
+
+                        <label for="nivel">Nível de conhecimento:</label>
+                        <select id="nivel" name="nivel">
+                            <!-- GRUPO DE OPÇÕES -->
+                            <optgroup label="Iniciante">
+                                <option value="b1">Básico 1</option>
+                                <option value="b2">Básico 2</option>
+                            </optgroup>
+                            <optgroup label="Avançado">
+                                <option value="a1">Avançado 1</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Métricas e Progresso</legend>
+                        <label for="file">Progresso do upload:</label>
+                        <!-- BARRA DE PROGRESSO (tarefas com fim) -->
+                        <progress id="file" max="100" value="70"> 70% </progress>
+                        
+                        <label for="disco">Espaço em disco:</label>
+                        <!-- MEDIDOR (valores dentro de um limite conhecido) -->
+                        <meter id="disco" value="0.6" min="0" max="1" low="0.2" high="0.8" optimum="0.5">60%</meter>
+                    </fieldset>
+                    
+                    <!-- RESULTADO CALCULADO -->
+                    <p>
+                        <output name="resultado">Aguardando cálculo...</output>
+                    </p>
+                </form>
+
+                <hr> <!-- QUEBRA TEMÁTICA -->
+
+                <!-- DETALHES EXPANSÍVEIS (ACCORDION) -->
+                <details>
+                    <summary>Clique para ver mais informações escondidas</summary>
+                    <p>Este é um parágrafo que estava oculto e foi revelado pelo usuário sem o uso de JavaScript.</p>
+                </details>
+
+                <!-- CAIXA DE DIÁLOGO / MODAL -->
+                <dialog open>
+                    <p>Isso é uma caixa de diálogo (modal) nativa do HTML5.</p>
+                    <form method="dialog">
+                        <button>Fechar</button>
+                    </form>
+                </dialog>
+            </section>
+        </article>
+
+        <!-- CONTEÚDO TANGENCIAL (SIDEBAR) -->
+        <aside>
+            <h2>Sobre o autor</h2>
+            <p>João é desenvolvedor front-end apaixonado por acessibilidade e HTML semântico.</p>
+        </aside>
+
+    </main>
+
+    <!-- RODAPÉ DO DOCUMENTO -->
+    <footer>
+        <p>&copy; 2026 Exemplo de Web Semântica. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
